@@ -5,15 +5,15 @@
 ### Typing scheme
 
 #### Vowels
-Ah - A
-Ih - I
-Eh - E
-Uh - U
-Ae - a
-i - i
+Ah - a
+Ih - i
+Eh - e
+Uh - u
+Ae - E
+i - I
 Eo - o
-u - u
-Ai - ai
+u - U
+Ai - A
 
 #### Consonants
 t 
