@@ -74,6 +74,58 @@ languagesystem latn dflt;
 
 @AllLetters = [ @AllConsonants @AllVowels ];
 
+# Numerals / Numbers
+# Unicode numbers
+@0 = [ zero ];
+@1 = [ one ];
+@2 = [ two ];
+@3 = [ three ];
+@4 = [ four ];
+@5 = [ five ];
+@6 = [ six ];
+@7 = [ seven ];
+@8 = [ eight ];
+@9 = [ nine ];
+@dex = [ turneddigittwo ]; # O is defined in the Keyboard Layout section in calt
+@elf = [ turneddigitthree ]; # P is defined in the Keyboard Layout section in calt
+
+@AllNumbersUnicode = [ @0 @1 @2 @3 @4 @5 @6 @7 @8 @9 @dex @elf ];
+
+# Base-Bot numbers
+@0Bot = [ zeroBaseBot ];
+@1Bot = [ oneBaseBot ];
+@2Bot = [ twoBaseBot ];
+@3Bot = [ threeBaseBot ];
+@4Bot = [ fourBaseBot ];
+@5Bot = [ fiveBaseBot ];
+@6Bot = [ sixBaseBot ];
+@7Bot = [ sevenBaseBot ];
+@8Bot = [ eightBaseBot ];
+@9Bot = [ nineBaseBot ];
+@dexBot = [ turneddigittwoBaseBot ];
+@elfBot = [ turneddigitthreeBaseBot ];
+
+@AllNumbersBot = [ @0Bot @1Bot @2Bot @3Bot @4Bot @5Bot @6Bot @7Bot @8Bot @9Bot @dexBot @elfBot ];
+
+# Base-Top numbers
+@0Top = [ zeroBaseTop ];
+@1Top = [ oneBaseTop ];
+@2Top = [ twoBaseTop ];
+@3Top = [ threeBaseTop ];
+@4Top = [ fourBaseTop ];
+@5Top = [ fiveBaseTop ];
+@6Top = [ sixBaseTop ];
+@7Top = [ sevenBaseTop ];
+@8Top = [ eightBaseTop ];
+@9Top = [ nineBaseTop ];
+@dexTop = [ turneddigittwoBaseTop ];
+@elfTop = [ turneddigitthreeBaseTop ];
+
+@AllNumbersTop = [ @0Top @1Top @2Top @3Top @4Top @5Top @6Top @7Top @8Top @9Top @dexTop @elfTop ];
+
+@AllNumberGlyphs = [ @AllNumbersUnicode @AllNumbersBot @AllNumbersTop ]; # contain all three items - zero, zerobasebot, zerobasetop
+
+
 
 # FEATURES START ______________________________
 
@@ -128,6 +180,22 @@ sub o by EoBase;
 sub u by UhBase;
 sub U by uBase;
 
+# Numerals / Numbers
+#sub zero by zeroBaseBot;
+#sub one by oneBaseBot;
+#sub two by twoBaseBot;
+#sub three by threeBaseBot;
+#sub four by fourBaseBot;
+#sub five by fiveBaseBot;
+#sub six by sixBaseBot;
+#sub seven by sevenBaseBot;
+#sub eight by eightBaseBot;
+#sub nine by nineBaseBot;
+sub O by turneddigittwo;                           # for completeness?
+#sub turneddigittwo by turneddigittwoBaseBot; # for completeness?
+sub P by turneddigitthree;                            # for completeness?
+#sub turneddigitthree by turneddigitthreeBaseBot; # for completeness?
+
 # SPACER HACK (remove later when spacer glyphs have been made)
 # sub space by Spacer;
 # sub Spacer Spacer by space;
@@ -177,7 +245,45 @@ sub @flatBotAll @flatTopAll' by @flatTopSpacerAll;
 #ignore sub @AllLetters @flatTopSpacerAll';
 #sub @flatTopSpacerAll' by @flatTopAll;
 
+
+
+### TESTING NUMERALS 
+
+sub zero by zeroBaseBot;
+sub one by oneBaseBot;
+sub two by twoBaseBot;
+sub three by threeBaseBot;
+sub four by fourBaseBot;
+sub five by fiveBaseBot;
+sub six by sixBaseBot;
+sub seven by sevenBaseBot;
+sub eight by eightBaseBot;
+sub nine by nineBaseBot;
+sub turneddigittwo by turneddigittwoBaseBot;
+sub turneddigitthree by turneddigitthreeBaseBot;
+
+# Replace hundreds column with Top numeral form (right-side of vertical)
+# Hundreds and Tens columns get shifted in kern using pos code.
+sub @AllNumbersBot' @AllNumbersBot @AllNumbersBot by @AllNumbersTop;
+
+# Replace commas in numbers with a dedicated comma for numbers
+sub @AllNumberGlyphs comma' @AllNumberGlyphs by commaNumbers;
+
+
 } calt;
+feature kern {
+# Kerning
 
+#> feature
+#< feature
 
+# Manual GPOS for swapping first and second numerals in three-blocks:
+
+#ignore sub @AllNumberGlyphs @AllNumberGlyphs @AllNumberGlyphs'; #this doesn't work
+#ignore sub @AllNumberGlyphs @AllNumberGlyphs @AllNumberGlyphs @AllNumberGlyphs'; #this doesn't work either
+
+#pos @AllNumberGlyphs <450 0 0 0> @AllNumberGlyphs <-450 0 0 0>; 
+pos @AllNumbersTop <450 0 0 0> @AllNumbersBot <-450 0 0 0>; # THIS IS BETTER because they only switch places IF they have already been substituted by the appropriate top or bottom numeral glyph form.
+
+} kern;
 
