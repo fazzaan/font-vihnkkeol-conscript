@@ -108,13 +108,16 @@ L
 </details>
   
 ### Glyph set
-_Glyph names in font design app_  
-#### Consonants
+<details>
+  <summary>Glyph names in font design app</summary>
+
+  #### Consonants
 taBase daBase TaBase DaBase kaBase gaBase tHaBase dHaBase kHaBase gHaBase saBase thaBase shaBase lhaBase khaBase HaBase hhaBase chaBase cHaBase naBase NaBase ngaBase raBase lraBase yaBase LaBase tsaBase TTaBase  
 
 #### Vowels
 AhBase EhBase IhBase UhBase iBase uBase AeBase EoBase AiBase  
 
+</details>  
 ___
 
 ## To Do
