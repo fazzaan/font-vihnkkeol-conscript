@@ -8,25 +8,25 @@ _First font designed for conscript "Vihnkkeol" for conlang "lhaedy tṡukh thul"
 <img width="1009" height="687" alt="image" src="https://github.com/user-attachments/assets/8c875405-eefd-4965-a1dd-1ca5e7c8242c" />
 </details>
 
-Download version 0.300 from the [Releases](https://github.com/fazzaan/font-vihnkkeol-conscript/releases) page
+Download the latest version from the [Releases](https://github.com/fazzaan/font-vihnkkeol-conscript/releases) page
 
 ## Dev notes
 
 ### Typing scheme
 
 <details>
-  <summary>Keyboard layout</summary>
+  <summary>Keyboard layout v1.2</summary>
   
 | Q  | W | E  | R  | T | Y | U  | I  | O  | P  |
 | -- | - | -- | -- | - | - | -- | -- | -- | -- |
-| **\-** |   | **Ae** | **lr** | **T** |   | **u**  | **i**  | **↊**  | **↋**  |
-| **T**  | **D** | **Eh** | **r**  | **t** | **y** | **Uh** | **Ih** | **Eo** | **lr** |
+| **\-** |   | **Ae** | **lr** | **T** |   | **u**  | **i**  | **EoEo**  | **L**  |
+| **↊**  | **↋** | **Eh** | **r**  | **t** | **y** | **Uh** | **Ih** | **Eo** | **lr** |
 | q  | w | e  | r  | t | y | u  | i  | o  | p  |
 
 | A  | S  | D | F  | G  | H  | J  | K  | L  |
 | -- | -- | - | -- | -- | -- | -- | -- | -- |
-| **Ai** | **sh** | **D** | **tH** | **gH** | **hh** |    | **kH** | **L**  |
-| **Ah** | **s**  | **d** | **th** | **g**  | **H**  | **kh** | **k**  | **lh** |
+| **Ai** | **sh** | **D** | **tH** | **gH** | **hh** |    | **kH** | **lh**  |
+| **Ah** | **s**  | **d** | **th** | **g**  | **H**  | **kh** | **k**  | **L** |
 | a  | s  | d | f  | g  | h  | j  | k  | l  |
 
 | Z   | X  | C  | V  | B | N | M |
