@@ -1,5 +1,5 @@
 # Font for Vihnkkeol Conscript
-_First font designed for conscript "Vihnkkeol" for conlang "lhaedy tṡukh thul", by Dr. Nyeh._
+_First font designed for conscript "Vihnkkeol" for conlang "lhae-tṡuk-thul", by Dr. Nyeh._
 
 * Conscript _Vihnkkeol_ is written vertically, top-to-bottom, left-to-right. You can enable this setting in most word processors and graphics apps.  
 
@@ -15,23 +15,25 @@ Download the latest version from the [Releases](https://github.com/fazzaan/font-
 ### Typing scheme
 
 <details>
-  <summary>Keyboard layout v1.2</summary>
+  <summary>Keyboard layout v2</summary>
+  
+  Needs checking over.
   
 | Q  | W | E  | R  | T | Y | U  | I  | O  | P  |
 | -- | - | -- | -- | - | - | -- | -- | -- | -- |
-| **\-** |   | **Ae** | **lr** | **T** |   | **u**  | **i**  | **EoEo**  | **L**  |
+| **\-** |   | **Ae** | **d** | **T** |  | **u**  | **i**  | **EoEo**  | **lh**  |
 | **↊**  | **↋** | **Eh** | **r**  | **t** | **y** | **Uh** | **Ih** | **Eo** | **lr** |
 | q  | w | e  | r  | t | y | u  | i  | o  | p  |
 
 | A  | S  | D | F  | G  | H  | J  | K  | L  |
 | -- | -- | - | -- | -- | -- | -- | -- | -- |
-| **Ai** | **sh** | **D** | **tH** | **gH** | **hh** |    | **kH** | **lh**  |
+| **Ai** | **sh** | **d'** | **tH** |       | **hh** | **kl'** | **kH** | **lh**  |
 | **Ah** | **s**  | **d** | **th** | **g**  | **H**  | **kh** | **k**  | **L** |
 | a  | s  | d | f  | g  | h  | j  | k  | l  |
 
 | Z   | X  | C  | V  | B | N | M |
 | --- | -- | -- | -- | - | - | - |
-| **T'**  |    |    |    |   | **N** |   |
+| **T'**  | **GS** | **k'** |        | **g** | **N** | **kH** |
 | **ts'** | **cH** | **ch** | **dH** | **N** | **n** | **ŋ** |
 | z   | x  | c  | v  | b | n | m |
 
@@ -121,18 +123,39 @@ AhBase EhBase IhBase UhBase iBase uBase AeBase EoBase AiBase
 ___
 
 ## To Do
+- [ ] New keyboard layout (2026 April)
+- [ ] Fix line-height  
 - [x] Numerals and custom placement  
 - [ ] Non-QWERTY unicode  
 - [ ] Non-QWERTY layout?
-- [ ] Handle hinting, because the stems (horizonatal) don't align when rendered despite being pixel-perfect aligned in the vectors.
+- [ ] Handle hinting, because the stems (horizonatal) don't align when rendered despite being pixel-perfect aligned in the vectors. -- Seems like this may not be possible?
 
 ___
 
 ## Changelog
+
+_Latest version: *0.500*._
+
 <details>
     <summary>Expand changelog</summary>
 
-v 0.320 - Possible changes (waiting decision)  
+### v 0.500
+Major update - NEW GLYPHS - 2026-03-31
+_(Notes on 0.320 not yet merged)_  
+* GSa (X) added
+* KKa (C) added
+* DDa (D) added
+* ga (g) changed (old archived to [B])
+* kHa (K) changed (old archived to [M])
+* Da archived to [R]
+* kla archived to [J]
+
+#### Known bugs
+##### Minor
+* gHa was not removed. It looks identical to ga. ga is on [g], gHa is on [G]. _Fixed in 0.510._
+
+### v 0.320 
+_Possible changes (waiting decision)_  
 - [ ] ⟨T⟩ [q] moved to [Y]  
 - [ ] ⟨D⟩ [w] moved to [C]  
 - [ ] ⟨-⟩ [Q] removed (hyphen does the same thing)  
@@ -140,7 +163,8 @@ v 0.320 - Possible changes (waiting decision)
 - [ ] elf [P] copied to [w]  
 
 
-v 0.310 - Keyboard remapping and new symbol glyphs  
+### v 0.310 
+Keyboard remapping and new symbol glyphs  
 * ⟨lh⟩ [l] moved to [L]  
 * ⟨L⟩ [L] moved to [l]  
 * placeholder glyphs added to un-lettered keys: [ , ]  
